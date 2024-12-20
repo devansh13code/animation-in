@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  </style>
+  <body>
+    <!--body container-->
+    <div id="bodydiv" class="h-svh w-full flex justify-center items-center">
+      <!--middle container-->
+      <div id="middle-container" class="bg-white w-3/6 h-2/3 flex">
+        <!--chiild 1 container-->
+        <div id="child-one" class="h-full w-1/2">
+          <header
+            id="login"
+            class="text-white text-center mt-24 text-4xl font-semibold uppercase"
+          >
+            LOGIN
+          </header>
+          <!--input and btn box-->
+          <div class="mt-5 h-64 flex justify-center items-center flex-col">
+            <input
+              class="shadow inputstyle"
+              type="text"
+              placeholder="@username"
+            />
+            <input
+              class="shadow bg-black mt-5 inputstyle"
+              type="password"
+              placeholder="password"
+            />
+            <input id="input3"
+              class="hidden shadow bg-black mt-5 inputstyle"
+              type="password"
+              placeholder="confirm password"
+            />
+            <!--remember me-->
+            <p id="remember" class="mt-5 text-white relative right-14 text-xs">
+              <input class="mr-1" type="checkbox" />Remember me
+            </p>
+            <button
+              id="btn1" class="mt-10 shadow rounded-full font-semibold bg-slate-400 w-24"
+            >
+              login
+            </button>
+            <footer class="relative cursor-pointer~ top-12  text-sm text-gray-400">
+              signup | help
+            </footer>
+          </div>
+        </div>
+        <!--chiild 2 container-->
+        <div
+          id="child-two"
+          class="h-full w-1/2 flex flex-col items-center text-center justify-center text-3xl text-gray-300 bg-white uppercase tracking-widest"
+        >
+          <p id="p2">
+            New user <br />
+            registration
+          </p>
+          <button
+            id="btn2"
+            class="mt-10 shadow rounded-full font-semibold w-44 text-sm text-white h-10 tracking- uppercase"
+          >
+            signup
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let childone = document.querySelector("#child-one");
+    let childtwo = document.querySelector("#child-two");
+    let btn2 = document.querySelector("#btn2");
+    let flag = true;
+    btn2.addEventListener("click", function () {
+      if (flag === true) {
+        childone.style.transform = "translateX(100%)";
+        childtwo.style.transform = "translateX(-100%)";
+        document.querySelector("#login").innerHTML = "sign-up";
+        document.querySelector("#p2").innerHTML = "Already have an account?";
+        document.querySelector("#btn2").innerHTML = "login";
+        document.querySelector("#btn1").innerHTML = "signup";
+        document.querySelector("#input3").style.display = "block";
+        document.querySelector("#remember").style.display = "none";
+        flag = false;
+      } else {
+        childone.style.transform = "translateX(-0%)";
+        childtwo.style.transform = "translateX(0%)";
+        document.querySelector("#login").innerHTML = "login";
+        document.querySelector("#p2").innerHTML = "    New user <br />registration";
+        document.querySelector("#btn2").innerHTML = "signup";
+        document.querySelector("#btn1").innerHTML = "login";
+        document.querySelector("#input3").style.display = "none";
+        document.querySelector("#remember").style.display = "block";
+
+        flag = true;
+      }
+    });
+  </script>
+</html>

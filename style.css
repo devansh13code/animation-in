@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my";
+  src: url(OpenSauceOne-Regular.woff);
+}
+body {
+  font-family: my;
+}
+#bodydiv,
+#middle-container {
+  background-color: #CCCCFF;
+}
+
+.inputstyle {
+  @apply font-extralight text-gray-900 text-sm bg-red-50 rounded-2xl w-3/5 h-8 px-4 border-none;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#child-one,
+#btn2 {
+  background-color: #203e5f;
+}
+
+#p2 {
+  color: #203e5f;
+}
+
+#child-one,
+#child-two {
+  transition: 1.1s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
