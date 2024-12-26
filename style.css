@@ -18,7 +18,7 @@ body {
 }
 
 .inputstyle {
-  @apply font-extralight text-gray-900 text-sm bg-red-50 rounded-2xl w-3/5 h-8 px-4 border-none;
+  @apply font-extralight text-gray-900 text-sm bg-white rounded-2xl w-3/5 h-8 px-5 border-none;
 }
 
 .shadow {
