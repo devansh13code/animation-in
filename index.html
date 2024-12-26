@@ -34,7 +34,8 @@
               type="password"
               placeholder="password"
             />
-            <input id="input3"
+            <input
+              id="input3"
               class="hidden shadow bg-black mt-5 inputstyle"
               type="password"
               placeholder="confirm password"
@@ -44,11 +45,14 @@
               <input class="mr-1" type="checkbox" />Remember me
             </p>
             <button
-              id="btn1" class="mt-10 shadow rounded-full font-semibold bg-slate-400 w-24"
+              id="btn1"
+              class="mt-10 shadow rounded-full font-semibold bg-slate-400 w-24"
             >
               login
             </button>
-            <footer class="relative cursor-pointer~ top-12  text-sm text-gray-400">
+            <footer
+              class="relative cursor-pointer~ top-12 text-sm text-gray-400"
+            >
               signup | help
             </footer>
           </div>
@@ -92,7 +96,8 @@
         childone.style.transform = "translateX(-0%)";
         childtwo.style.transform = "translateX(0%)";
         document.querySelector("#login").innerHTML = "login";
-        document.querySelector("#p2").innerHTML = "    New user <br />registration";
+        document.querySelector("#p2").innerHTML =
+          "    New user <br />registration";
         document.querySelector("#btn2").innerHTML = "signup";
         document.querySelector("#btn1").innerHTML = "login";
         document.querySelector("#input3").style.display = "none";
@@ -102,4 +107,5 @@
       }
     });
   </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </html>
